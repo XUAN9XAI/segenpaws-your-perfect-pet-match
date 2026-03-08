@@ -217,6 +217,21 @@ const CareTips = () => {
           )}
         </div>
       </section>
+      {/* Know Your Pet FAB */}
+      <motion.button
+        onClick={() => setKnowYourPetOpen(true)}
+        className="fixed bottom-6 right-6 z-40 flex items-center gap-2 bg-primary text-primary-foreground px-5 py-3 rounded-full shadow-lg hover:shadow-xl transition-shadow"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5 }}
+      >
+        <PawPrint className="h-5 w-5" />
+        <span className="font-heading font-bold text-sm">Know Your Pet</span>
+      </motion.button>
+
+      <KnowYourPetModal open={knowYourPetOpen} onOpenChange={setKnowYourPetOpen} />
     </Layout>
   );
 };
