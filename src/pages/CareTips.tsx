@@ -101,6 +101,7 @@ const tips = [
 const CareTips = () => {
   const [activeCategory, setActiveCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
+  const [knowYourPetOpen, setKnowYourPetOpen] = useState(false);
 
   const filteredTips = tips.filter((tip) => {
     const matchesCategory = activeCategory === "all" || tip.category === activeCategory;
