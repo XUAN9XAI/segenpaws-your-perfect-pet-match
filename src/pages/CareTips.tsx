@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
-import { Utensils, Scissors, GraduationCap, Heart, Brain, Search } from "lucide-react";
+import { Utensils, Scissors, GraduationCap, Heart, Brain, Search, PawPrint } from "lucide-react";
 import { Input } from "@/components/ui/input";
+import { KnowYourPetModal } from "@/components/care-tips/KnowYourPetModal";
 
 const categories = [
   { id: "all", name: "All Tips", icon: Heart },
